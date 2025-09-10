@@ -11,13 +11,24 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
 </head>
 <body>
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>LCGM - Roupas Personalizadas</title>
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
     <!-- Header e Navegação -->
     <header>
         <nav class="navbar">
             <div class="nav-container">
                 <a href="#" class="nav-logo">
-    <img src="imagens/logo.jpeg" alt="LCGM - Roupas Personalizadas">
-</a>
+                    <img src="imagens/logo.jpeg" alt="LCGM - Roupas Personalizadas">
+                </a>
                 <ul class="nav-menu">
                     <li class="nav-item">
                         <a href="#inicio" class="nav-link">Início</a>
@@ -35,7 +46,7 @@
                         <a href="#contato" class="nav-link">Contato</a>
                     </li>
                     <li class="nav-item">
-                        <a href="#contato" class="nav-link nav-cta">Orçamento</a>
+                        <a href="https://wa.me/5511930153777" target="_blank" class="nav-link nav-cta">Orçamento</a>
                     </li>
                 </ul>
                 <div class="hamburger">
@@ -51,265 +62,631 @@
     <section id="inicio" class="hero">
         <div class="hero-content">
             <h1 class="hero-title">Roupas personalizadas com a sua <span class="highlight">identidade</span></h1>
-            <p class="hero-subtitle">Transformamos suas ideias em peças únicas e exclusivas</p>
+            <p class="hero-subtitle">Transformamos suas ideias em peças únicas e exclusivas para você ou sua empresa</p>
             <div class="hero-buttons">
                 <a href="#produtos" class="cta-button">Ver Produtos</a>
-                <a href="#contato" class="cta-button secondary">Solicitar Orçamento</a>
+                <a href="https://wa.me/5511930153777" target="_blank" class="cta-button secondary">
+                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                </a>
+            </div>
+            <div class="hero-features">
+                <div class="feature">
+                    <i class="fas fa-truck"></i>
+                    <span>Entregamos para todo Brasil</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-tshirt"></i>
+                    <span>Qualidade premium</span>
+                </div>
+                <div class="feature">
+                    <i class="fas fa-award"></i>
+                    <span>+500 clientes satisfeitos</span>
+                </div>
             </div>
         </div>
         <div class="hero-image">
             <img src="imagens/capa.jpeg" alt="Roupas personalizadas LCGM">
+            <div class="floating-elements">
+                <div class="floating-element element-1">
+                    <i class="fas fa-star"></i>
+                </div>
+                <div class="floating-element element-2">
+                    <i class="fas fa-heart"></i>
+                </div>
+                <div class="floating-element element-3">
+                    <i class="fas fa-check"></i>
+                </div>
+            </div>
         </div>
         <div class="scroll-indicator">
             <div class="scroll-line"></div>
+            <p>Role para descobrir</p>
         </div>
     </section>
+
+    <script src="script.js"></script>
+</body>
+</html>
 
     <!-- Produtos -->
     <section id="produtos" class="produtos">
         <div class="container">
-            <h2 class="section-title">Nossos <span class="highlight">Produtos</span></h2>
-            <p class="section-subtitle">Descubra nossa variedade de produtos personalizados</p>
+            <div class="section-header">
+                <h2 class="section-title">Nossos <span class="highlight">Produtos</span></h2>
+                <p class="section-subtitle">Transformamos suas ideias em peças únicas e exclusivas</p>
+                <div class="section-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-dot"></div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
+            <div class="produtos-filters">
+                <button class="filter-btn active" data-filter="all">Todos</button>
+                <button class="filter-btn" data-filter="camisetas">Camisetas</button>
+                <button class="filter-btn" data-filter="salao">Salão</button>
+                <button class="filter-btn" data-filter="infantil">Infantil</button>
+                <button class="filter-btn" data-filter="estampas">Estampas</button>
+            </div>
             
             <div class="produtos-grid">
-                <div class="produto-card">
+                <div class="produto-card" data-category="camisetas">
                     <div class="produto-image">
                         <img src="imagens/camisetas.jpg" alt="Camisetas Personalizadas">
+                        <div class="produto-badge">Mais Vendido</div>
                         <div class="produto-overlay">
-                            <a href="#contato" class="produto-cta">Solicitar Orçamento</a>
+                            <div class="overlay-content">
+                                <a href="https://wa.me/5511930153777?text=Olá! Gostaria de um orçamento para Camisetas Personalizadas" target="_blank" class="produto-cta">
+                                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                                </a>
+                                <div class="produto-actions">
+                                    <button class="action-btn" title="Visualizar Detalhes">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Favoritar">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="produto-info">
                         <h3>Camisetas Personalizadas</h3>
-                        <p>Camisetas de algodão com estampas de alta qualidade</p>
+                        <p>Camisetas de algodão com estampas de alta qualidade e durabilidade</p>
+                        <div class="produto-features">
+                            <span><i class="fas fa-check"></i> Algodão 100%</span>
+                            <span><i class="fas fa-check"></i> Estampa premium</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="produto-card">
+                <div class="produto-card" data-category="salao">
                     <div class="produto-image">
                         <img src="imagens/capas-salao.jpg" alt="Capas para Salão">
                         <div class="produto-overlay">
-                            <a href="#contato" class="produto-cta">Solicitar Orçamento</a>
+                            <div class="overlay-content">
+                                <a href="https://wa.me/5511930153777?text=Olá! Gostaria de um orçamento para Capas para Salão" target="_blank" class="produto-cta">
+                                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                                </a>
+                                <div class="produto-actions">
+                                    <button class="action-btn" title="Visualizar Detalhes">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Favoritar">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="produto-info">
                         <h3>Capas para Salão</h3>
-                        <p>Capas personalizadas para profissionais de beleza</p>
+                        <p>Capas personalizadas para profissionais de beleza com tecido antimanchas</p>
+                        <div class="produto-features">
+                            <span><i class="fas fa-check"></i> Resistente</span>
+                            <span><i class="fas fa-check"></i> Fácil limpeza</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="produto-card">
+                <div class="produto-card" data-category="infantil">
                     <div class="produto-image">
                         <img src="imagens/moletom-infantil.jpg" alt="Moletom Infantil">
+                        <div class="produto-badge">Novidade</div>
                         <div class="produto-overlay">
-                            <a href="#contato" class="produto-cta">Solicitar Orçamento</a>
+                            <div class="overlay-content">
+                                <a href="https://wa.me/5511930153777?text=Olá! Gostaria de um orçamento para Moletom Infantil" target="_blank" class="produto-cta">
+                                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                                </a>
+                                <div class="produto-actions">
+                                    <button class="action-btn" title="Visualizar Detalhes">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Favoritar">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="produto-info">
                         <h3>Moletom Infantil</h3>
-                        <p>Moletons divertidos e confortáveis para crianças</p>
+                        <p>Moletons divertidos e confortáveis para crianças com estampas lúdicas</p>
+                        <div class="produto-features">
+                            <span><i class="fas fa-check"></i> Confortável</span>
+                            <span><i class="fas fa-check"></i> Divertido</span>
+                        </div>
                     </div>
                 </div>
                 
-                <div class="produto-card">
+                <div class="produto-card" data-category="estampas">
                     <div class="produto-image">
                         <img src="imagens/estampas.jpg" alt="Estampas Personalizadas">
                         <div class="produto-overlay">
-                            <a href="#contato" class="produto-cta">Solicitar Orçamento</a>
+                            <div class="overlay-content">
+                                <a href="https://wa.me/5511930153777?text=Olá! Gostaria de um orçamento para Estampas Personalizadas" target="_blank" class="produto-cta">
+                                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                                </a>
+                                <div class="produto-actions">
+                                    <button class="action-btn" title="Visualizar Detalhes">
+                                        <i class="fas fa-eye"></i>
+                                    </button>
+                                    <button class="action-btn" title="Favoritar">
+                                        <i class="far fa-heart"></i>
+                                    </button>
+                                </div>
+                            </div>
                         </div>
                     </div>
                     <div class="produto-info">
                         <h3>Estampas Personalizadas</h3>
-                        <p>Crie estampas exclusivas para suas peças</p>
+                        <p>Crie estampas exclusivas para suas peças com nossa equipe especializada</p>
+                        <div class="produto-features">
+                            <span><i class="fas fa-check"></i> Design exclusivo</span>
+                            <span><i class="fas fa-check"></i> Alta qualidade</span>
+                        </div>
                     </div>
                 </div>
             </div>
+            
         </div>
     </section>
+
 
     <!-- Sobre Nós -->
     <section id="sobre" class="sobre">
         <div class="container">
+            <div class="section-header">
+                <h2 class="section-title">Nossa <span class="highlight">História</span></h2>
+                <p class="section-subtitle">Conheça a trajetória da LCGM no mundo da moda personalizada</p>
+                <div class="section-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-dot"></div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
+            
             <div class="sobre-content">
                 <div class="sobre-texto">
-                    <h2 class="section-title">Sobre a <span class="highlight">LCGM</span></h2>
-                    <p>Há mais de 5 anos no mercado, a LCGM traz qualidade e criatividade para o mundo da moda personalizada. Nossa missão é transformar suas ideias em peças únicas que expressam sua identidade.</p>
-                    <p>Utilizamos tecnologia de ponta e materiais de primeira qualidade para garantir a satisfação total de nossos clientes.</p>
+                    <div class="timeline">
+                        <div class="timeline-item">
+                            <div class="timeline-year">2018</div>
+                            <div class="timeline-content">
+                                <h3>Fundação da LCGM</h3>
+                                <p>Início da nossa jornada com foco em qualidade e criatividade</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2020</div>
+                            <div class="timeline-content">
+                                <h3>Expansão de Produtos</h3>
+                                <p>Ampliamos nosso portfólio para atender diferentes necessidades</p>
+                            </div>
+                        </div>
+                        <div class="timeline-item">
+                            <div class="timeline-year">2023</div>
+                            <div class="timeline-content">
+                                <h3>Tecnologia Avançada</h3>
+                                <p>Investimos em equipamentos de última geração</p>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <p class="sobre-descricao">Há mais de 5 anos no mercado, a LCGM traz <strong>qualidade e criatividade</strong> para o mundo da moda personalizada. Nossa missão é transformar suas ideias em peças únicas que expressam sua identidade.</p>
+                    
+                    <p class="sobre-descricao">Utilizamos tecnologia de ponta e materiais de primeira qualidade para garantir a <strong>satisfação total</strong> de nossos clientes.</p>
+                    
+                    <div class="sobre-stats">
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="500">0</div>
+                            <div class="stat-label">Clientes Satisfeitos</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="5">0</div>
+                            <div class="stat-label">Anos de Experiência</div>
+                        </div>
+                        <div class="stat-item">
+                            <div class="stat-number" data-count="1000">0</div>
+                            <div class="stat-label">Peças Entregues</div>
+                        </div>
+                    </div>
+                    
                     <ul class="sobre-lista">
-                        <li><i class="fas fa-check"></i> Qualidade premium</li>
-                        <li><i class="fas fa-check"></i> Entregas rápidas</li>
-                        <li><i class="fas fa-check"></i> Atendimento personalizado</li>
-                        <li><i class="fas fa-check"></i> Preços competitivos</li>
+                        <li><i class="fas fa-check-circle"></i> Qualidade premium garantida</li>
+                        <li><i class="fas fa-check-circle"></i> Entregas rápidas e seguras</li>
+                        <li><i class="fas fa-check-circle"></i> Atendimento personalizado</li>
+                        <li><i class="fas fa-check-circle"></i> Preços competitivos</li>
                     </ul>
-                    <a href="#contato" class="cta-button">Fale Conosco</a>
+                
                 </div>
+                
                 <div class="sobre-imagem">
-                    <img src="imagens/sobre-nos.jpg" alt="Sobre a LCGM">
+                    <div class="image-container">
+                        <img src="imagens/sobre-nos.jpg" alt="Sobre a LCGM" class="main-image">
+                        <div class="image-badge">
+                            <div class="badge-content">
+                                <span class="badge-number">5+</span>
+                                <span class="badge-text">Anos de Experiência</span>
+                            </div>
+                        </div>
+                        <div class="floating-element element-1">
+                            <i class="fas fa-award"></i>
+                        </div>
+                        <div class="floating-element element-2">
+                            <i class="fas fa-heart"></i>
+                        </div>
+                    </div>
+                    
+                    <div class="sobre-destaques">
+                        <div class="destaque-card">
+                            <div class="destaque-icon">
+                                <i class="fas fa-trophy"></i>
+                            </div>
+                            <h4>Qualidade Garantida</h4>
+                            <p>Materiais selecionados e processos rigorosos</p>
+                        </div>
+                        <div class="destaque-card">
+                            <div class="destaque-icon">
+                                <i class="fas fa-truck-fast"></i>
+                            </div>
+                            <h4>Entrega Rápida</h4>
+                            <p>Entregamos em todo Brasil com agilidade</p>
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
     </section>
+
 
     <!-- Depoimentos -->
     <section id="depoimentos" class="depoimentos">
         <div class="container">
-            <h2 class="section-title">O que nossos <span class="highlight">clientes</span> dizem</h2>
-            <p class="section-subtitle">A satisfação dos nossos clientes é nossa maior recompensa</p>
+            <div class="section-header">
+                <h2 class="section-title">O que nossos clientes dizem</h2>
+                <p class="section-subtitle">A satisfação dos nossos clientes é nossa maior recompensa</p>
+                <div class="section-decoration">
+                    <div class="decoration-line"></div>
+                    <div class="decoration-dot"></div>
+                    <div class="decoration-line"></div>
+                </div>
+            </div>
             
-            <div class="depoimentos-slider">
-                <div class="depoimento">
-                    <div class="depoimento-content">
-                        <div class="depoimento-img">
-                            <img src="imagens/cliente1.jpg" alt="Cliente">
+            <div class="depoimentos-container">
+                <div class="depoimentos-slider">
+                    <div class="depoimento">
+                        <div class="depoimento-content">
+                            <div class="depoimento-header">
+                                <div class="depoimento-img">
+                                    <img src="imagens/cliente1.jpg" alt="Maria Silva">
+                                </div>
+                                <div class="depoimento-info">
+                                    <h4>Maria Silva</h4>
+                                    <span>Empresária</span>
+                                </div>
+                                <div class="depoimento-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="depoimento-texto">
+                                <p>"Adorei o resultado das camisetas personalizadas para minha empresa. A qualidade do tecido e da estampa é impressionante! O atendimento foi excelente e as entregas superaram minhas expectativas."</p>
+                            </div>
+                            <div class="depoimento-footer">
+                                <div class="depoimento-date">
+                                    <i class="far fa-calendar"></i> 15 Nov, 2023
+                                </div>
+                                <div class="depoimento-social">
+                                    <i class="fab fa-instagram"></i> @mariasilva
+                                </div>
+                            </div>
                         </div>
-                        <div class="depoimento-texto">
-                            <p>"Adorei o resultado das camisetas personalizadas para minha empresa. A qualidade do tecido e da estampa é impressionante!"</p>
-                            <h4>Maria Silva</h4>
-                            <span>Empresária</span>
+                    </div>
+                    
+                    <div class="depoimento">
+                        <div class="depoimento-content">
+                            <div class="depoimento-header">
+                                <div class="depoimento-img">
+                                    <img src="imagens/cliente2.jpg" alt="Carlos Santos">
+                                </div>
+                                <div class="depoimento-info">
+                                    <h4>Carlos Santos</h4>
+                                    <span>Proprietário de Salão</span>
+                                </div>
+                                <div class="depoimento-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star-half-alt"></i>
+                                </div>
+                            </div>
+                            <div class="depoimento-texto">
+                                <p>"As capas para meu salão ficaram perfeitas! Meus clientes amam e ainda faço propaganda gratuita. O material é resistente e a personalização ficou exatamente como eu imaginei."</p>
+                            </div>
+                            <div class="depoimento-footer">
+                                <div class="depoimento-date">
+                                    <i class="far fa-calendar"></i> 8 Dez, 2023
+                                </div>
+                                <div class="depoimento-social">
+                                    <i class="fab fa-facebook"></i> Carlos Santos
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="depoimento">
+                        <div class="depoimento-content">
+                            <div class="depoimento-header">
+                                <div class="depoimento-img">
+                                    <img src="imagens/cliente3.jpg" alt="Ana Oliveira">
+                                </div>
+                                <div class="depoimento-info">
+                                    <h4>Ana Oliveira</h4>
+                                    <span>Mãe e Blogueira</span>
+                                </div>
+                                <div class="depoimento-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="depoimento-texto">
+                                <p>"Os moletons infantis são uma graça! Meus filhos amam e todos perguntam onde comprei. A qualidade do produto é excelente e as estampas são duráveis mesmo após várias lavagens."</p>
+                            </div>
+                            <div class="depoimento-footer">
+                                <div class="depoimento-date">
+                                    <i class="far fa-calendar"></i> 5 Jan, 2024
+                                </div>
+                                <div class="depoimento-social">
+                                    <i class="fab fa-instagram"></i> @ana.oliveira
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <div class="depoimento">
+                        <div class="depoimento-content">
+                            <div class="depoimento-header">
+                                <div class="depoimento-img">
+                                    <img src="imagens/cliente4.jpg" alt="Roberto Almeida">
+                                </div>
+                                <div class="depoimento-info">
+                                    <h4>Roberto Almeida</h4>
+                                    <span>Gerente de Marketing</span>
+                                </div>
+                                <div class="depoimento-rating">
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                    <i class="fas fa-star"></i>
+                                </div>
+                            </div>
+                            <div class="depoimento-texto">
+                                <p>"Contratamos a LCGM para uniformes corporativos e ficamos impressionados com a qualidade. O atendimento personalizado e o cuidado com os detalhes fizeram toda a diferença!"</p>
+                            </div>
+                            <div class="depoimento-footer">
+                                <div class="depoimento-date">
+                                    <i class="far fa-calendar"></i> 20 Fev, 2024
+                                </div>
+                                <div class="depoimento-social">
+                                    <i class="fab fa-linkedin"></i> Roberto Almeida
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 
-                <div class="depoimento">
-                    <div class="depoimento-content">
-                        <div class="depoimento-img">
-                            <img src="imagens/cliente2.jpg" alt="Cliente">
-                        </div>
-                        <div class="depoimento-texto">
-                            <p>"As capas para meu salão ficaram perfeitas! Meus clientes amam e ainda faço propaganda gratuita."</p>
-                            <h4>Carlos Santos</h4>
-                            <span>Proprietário de Salão</span>
-                        </div>
-                    </div>
+                <div class="slider-controls">
+                    <button class="slider-btn prev-btn">
+                        <i class="fas fa-chevron-left"></i>
+                    </button>
+                    <div class="slider-dots"></div>
+                    <button class="slider-btn next-btn">
+                        <i class="fas fa-chevron-right"></i>
+                    </button>
                 </div>
-                
-                <div class="depoimento">
-                    <div class="depoimento-content">
-                        <div class="depoimento-img">
-                            <img src="imagens/cliente3.jpg" alt="Cliente">
-                        </div>
-                        <div class="depoimento-texto">
-                            <p>"Os moletons infantis são uma graça! Meus filhos amam e todos perguntam onde comprei."</p>
-                            <h4>Ana Oliveira</h4>
-                            <span>Mãe e Blogueira</span>
-                        </div>
-                    </div>
-                </div>
+            </div>
+            
+            <div class="depoimentos-cta">
+                <p>Quer fazer parte dos nossos clientes satisfeitos?</p>
+                <a href="https://wa.me/5511930153777" target="_blank" class="cta-button">
+                    <i class="fab fa-whatsapp"></i> Solicitar Orçamento
+                </a>
+            </div>
+        </div>
+        
+        <!-- Elementos decorativos flutuantes -->
+        <div class="floating-testimonials">
+            <div class="floating-quote">
+                <i class="fas fa-quote-left"></i>
+            </div>
+            <div class="floating-quote">
+                <i class="fas fa-quote-right"></i>
             </div>
         </div>
     </section>
 
-    <!-- Contato -->
-    <section id="contato" class="contato">
-        <div class="container">
-            <h2 class="section-title">Entre em <span class="highlight">Contato</span></h2>
-            <p class="section-subtitle">Pronto para transformar suas ideias em realidade?</p>
-            
-            <div class="contato-content">
-                <div class="contato-info">
-                    <h3>Solicite seu orçamento</h3>
-                    <p>Estamos prontos para criar peças exclusivas para você</p>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-phone"></i>
-                        <div>
-                            <h4>Telefone</h4>
-                            <p>(XX) XXXXX-XXXX</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-envelope"></i>
-                        <div>
-                            <h4>E-mail</h4>
-                            <p>contato@lcgm.com.br</p>
-                        </div>
-                    </div>
-                    
-                    <div class="info-item">
-                        <i class="fas fa-map-marker-alt"></i>
-                        <div>
-                            <h4>Endereço</h4>
-                            <p>Endereço da empresa, 123 - Cidade - Estado</p>
-                        </div>
-                    </div>
-                    
-                    <div class="social-links">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
-                    </div>
-                </div>
-                
-                <div class="contato-form">
-                    <form id="form-orcamento">
-                        <div class="form-group">
-                            <input type="text" placeholder="Seu nome" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="email" placeholder="Seu e-mail" required>
-                        </div>
-                        <div class="form-group">
-                            <input type="tel" placeholder="Seu telefone">
-                        </div>
-                        <div class="form-group">
-                            <select required>
-                                <option value="" disabled selected>Tipo de produto</option>
-                                <option value="camiseta">Camiseta Personalizada</option>
-                                <option value="capa">Capa para Salão</option>
-                                <option value="moletom">Moletom Infantil</option>
-                                <option value="estampa">Estampa Personalizada</option>
-                            </select>
-                        </div>
-                        <div class="form-group">
-                            <textarea placeholder="Descreva sua ideia" rows="5" required></textarea>
-                        </div>
-                        <button type="submit" class="cta-button">Solicitar Orçamento</button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
 
     <!-- Footer -->
     <footer>
         <div class="container">
             <div class="footer-content">
                 <div class="footer-section">
-                    <h3>LCGM</h3>
-                    <p>Roupas personalizadas com qualidade e criatividade.</p>
+                    <div class="footer-logo">
+                        <img src="imagens/logo.jpeg" alt="LCGM - Roupas Personalizadas">
+                    </div>
+                    <p>Transformamos suas ideias em peças únicas e exclusivas com qualidade premium e atendimento personalizado.</p>
+                    <div class="footer-contact-info">
+                        <div class="contact-item">
+                            <i class="fas fa-phone"></i>
+                            <span>(11) 93015-3777</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-envelope"></i>
+                            <span>contato@lcgm.com.br</span>
+                        </div>
+                        <div class="contact-item">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <span>São Paulo, Brasil</span>
+                        </div>
+                    </div>
                 </div>
+                
                 <div class="footer-section">
                     <h3>Links Rápidos</h3>
                     <ul>
-                        <li><a href="#inicio">Início</a></li>
-                        <li><a href="#produtos">Produtos</a></li>
-                        <li><a href="#sobre">Sobre Nós</a></li>
-                        <li><a href="#contato">Contato</a></li>
+                        <li><a href="#inicio"><i class="fas fa-chevron-right"></i> Início</a></li>
+                        <li><a href="#produtos"><i class="fas fa-chevron-right"></i> Produtos</a></li>
+                        <li><a href="#sobre"><i class="fas fa-chevron-right"></i> Sobre Nós</a></li>
+                        <li><a href="#depoimentos"><i class="fas fa-chevron-right"></i> Depoimentos</a></li>
+                        <li><a href="#contato"><i class="fas fa-chevron-right"></i> Contato</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
-                    <h3>Produtos</h3>
+                    <h3>Nossos Produtos</h3>
                     <ul>
-                        <li><a href="#produtos">Camisetas Personalizadas</a></li>
-                        <li><a href="#produtos">Capas para Salão</a></li>
-                        <li><a href="#produtos">Moletom Infantil</a></li>
-                        <li><a href="#produtos">Estampas Personalizadas</a></li>
+                        <li><a href="#produtos"><i class="fas fa-tshirt"></i> Camisetas Personalizadas</a></li>
+                        <li><a href="#produtos"><i class="fas fa-cut"></i> Capas para Salão</a></li>
+                        <li><a href="#produtos"><i class="fas fa-child"></i> Moletom Infantil</a></li>
+                        <li><a href="#produtos"><i class="fas fa-paint-brush"></i> Estampas Personalizadas</a></li>
+                        <li><a href="#produtos"><i class="fas fa-star"></i> Todos os Produtos</a></li>
                     </ul>
                 </div>
+                
                 <div class="footer-section">
                     <h3>Redes Sociais</h3>
+                    <p>Nos acompanhe nas redes sociais e fique por dentro das novidades!</p>
                     <div class="social-icons">
-                        <a href="#"><i class="fab fa-facebook-f"></i></a>
-                        <a href="#"><i class="fab fa-instagram"></i></a>
-                        <a href="#"><i class="fab fa-whatsapp"></i></a>
+                        <a href="#" class="social-icon" title="Facebook">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="Instagram">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                        <a href="https://wa.me/5511930153777" target="_blank" class="social-icon" title="WhatsApp">
+                            <i class="fab fa-whatsapp"></i>
+                        </a>
+                        <a href="#" class="social-icon" title="YouTube">
+                            <i class="fab fa-youtube"></i>
+                        </a>
+                    </div>
+                    
+                    <div class="footer-newsletter">
+                        <h4>Newsletter</h4>
+                        <p>Cadastre-se para receber promoções exclusivas</p>
+                        <form class="newsletter-form">
+                            <input type="email" placeholder="Seu melhor e-mail" required>
+                            <button type="submit">
+                                <i class="fas fa-paper-plane"></i>
+                            </button>
+                        </form>
                     </div>
                 </div>
             </div>
+            
+            <div class="footer-middle">
+                <div class="footer-features">
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-truck"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Entregas Rápidas</h4>
+                            <p>Para todo Brasil</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-shield-alt"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Qualidade Garantida</h4>
+                            <p>Materiais premium</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-credit-card"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Pagamento Seguro</h4>
+                            <p>Várias formas de pagamento</p>
+                        </div>
+                    </div>
+                    <div class="feature-item">
+                        <div class="feature-icon">
+                            <i class="fas fa-headset"></i>
+                        </div>
+                        <div class="feature-content">
+                            <h4>Suporte 24/7</h4>
+                            <p>Atendimento personalizado</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
             <div class="footer-bottom">
-                <p>&copy; 2025 LCGM - Todos os direitos reservados</p>
+                <div class="footer-bottom-content">
+                    <p>&copy; 2025 LCGM Roupas Personalizadas. Todos os direitos reservados.</p>
+                    <div class="footer-links">
+                        <a href="#">Política de Privacidade</a>
+                        <a href="#">Termos de Uso</a>
+                        <a href="#">Política de Trocas</a>
+                    </div>
+                </div>
+                
+                <div class="payment-methods">
+                    <h4>Formas de Pagamento</h4>
+                    <div class="payment-icons">
+                        <i class="fab fa-cc-visa" title="Visa"></i>
+                        <i class="fab fa-cc-mastercard" title="Mastercard"></i>
+                        <i class="fab fa-cc-amex" title="American Express"></i>
+                        <i class="fab fa-cc-paypal" title="PayPal"></i>
+                        <i class="fab fa-pix" title="PIX"></i>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="back-to-top">
+                <button id="backToTop" title="Voltar ao topo">
+                    <i class="fas fa-chevron-up"></i>
+                </button>
             </div>
         </div>
+        
+        <!-- WhatsApp Float Button -->
+        <a href="https://wa.me/5511930153777" target="_blank" class="whatsapp-float">
+            <i class="fab fa-whatsapp"></i>
+            <span class="whatsapp-text">Fale Conosco</span>
+        </a>
     </footer>
 
     <script src="script.js"></script>
