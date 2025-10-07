@@ -2270,4 +2270,114 @@ footer::before {
         right: 20px;
     }
 }
+/* Seção Trabalhos */
+.trabalhos-section {
+    padding: 60px 0;
+    background: white;
+}
 
+.section-title {
+    text-align: center;
+    font-size: 2.5rem;
+    color: var(--dark);
+    margin-bottom: 40px;
+    position: relative;
+}
+
+.section-title::after {
+    content: '';
+    position: absolute;
+    bottom: -10px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 60px;
+    height: 4px;
+    background: var(--primary);
+    border-radius: 2px;
+}
+
+/* Grid de Trabalhos */
+.trabalhos-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 20px;
+}
+
+/* Itens de Trabalho */
+.trabalho-item {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.08);
+    transition: all 0.4s ease;
+    opacity: 0;
+    transform: translateY(30px);
+    animation: fadeInUp 0.6s ease forwards;
+}
+
+.trabalho-item:nth-child(1) { animation-delay: 0.1s; }
+.trabalho-item:nth-child(2) { animation-delay: 0.2s; }
+.trabalho-item:nth-child(3) { animation-delay: 0.3s; }
+.trabalho-item:nth-child(4) { animation-delay: 0.4s; }
+.trabalho-item:nth-child(5) { animation-delay: 0.5s; }
+.trabalho-item:nth-child(6) { animation-delay: 0.6s; }
+.trabalho-item:nth-child(7) { animation-delay: 0.7s; }
+.trabalho-item:nth-child(8) { animation-delay: 0.8s; }
+.trabalho-item:nth-child(9) { animation-delay: 0.9s; }
+.trabalho-item:nth-child(10) { animation-delay: 1s; }
+
+.trabalho-item:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.trabalho-image {
+    position: relative;
+    overflow: hidden;
+    height: 250px;
+}
+
+.trabalho-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: all 0.5s ease;
+}
+
+.trabalho-item:hover .trabalho-image img {
+    transform: scale(1.05);
+}
+
+/* Animações */
+@keyframes fadeInUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .trabalhos-grid {
+        grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+        gap: 15px;
+    }
+    
+    .trabalho-image {
+        height: 200px;
+    }
+    
+    .section-title {
+        font-size: 2rem;
+    }
+}
+
+@media (max-width: 576px) {
+    .trabalhos-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+    
+    .trabalho-section {
+        padding: 40px 0;
+    }
+}
