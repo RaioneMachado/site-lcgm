@@ -2381,3 +2381,213 @@ footer::before {
         padding: 40px 0;
     }
 }
+/* Seção Camisas Personalizadas - CSS ISOLADO */
+.camisas-personalizadas {
+    background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+    padding: 60px 20px;
+    position: relative;
+    overflow: hidden;
+}
+
+.camisas-personalizadas::before {
+    content: '';
+    position: absolute;
+    width: 150px;
+    height: 150px;
+    background: linear-gradient(45deg, #ff3d00, #ff6b00);
+    opacity: 0.03;
+    border-radius: 50%;
+    top: -75px;
+    right: -75px;
+    animation: camisas-pulse 15s infinite alternate;
+}
+
+.camisas-personalizadas::after {
+    content: '';
+    position: absolute;
+    width: 100px;
+    height: 100px;
+    background: linear-gradient(45deg, #ff6b00, #ff9224);
+    opacity: 0.03;
+    border-radius: 50%;
+    bottom: -50px;
+    left: -50px;
+    animation: camisas-pulse 12s infinite alternate;
+}
+
+.camisas-container {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.camisas-header {
+    text-align: center;
+    margin-bottom: 3rem;
+}
+
+.camisas-title {
+    font-size: 2.2rem;
+    color: #2c2c54;
+    margin-bottom: 1rem;
+    font-weight: 700;
+}
+
+.camisas-decoration {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px;
+}
+
+.camisas-line {
+    width: 40px;
+    height: 2px;
+    background: #ff3d00;
+}
+
+.camisas-dot {
+    width: 6px;
+    height: 6px;
+    background: #ff3d00;
+    border-radius: 50%;
+}
+
+.camisas-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 30px;
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.camisa-card {
+    background: white;
+    border-radius: 15px;
+    overflow: hidden;
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.camisa-card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+}
+
+.camisa-image-container {
+    position: relative;
+    overflow: hidden;
+    width: 100%;
+    aspect-ratio: 2/3; /* MODO RETRATO REAL - proporção 2:3 */
+}
+
+.camisa-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.4s ease;
+}
+
+.camisa-card:hover .camisa-img {
+    transform: scale(1.05);
+}
+
+.camisa-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(to top, rgba(44, 44, 84, 0.9), transparent);
+    display: flex;
+    align-items: flex-end;
+    justify-content: center;
+    opacity: 0;
+    transition: all 0.3s ease;
+    padding-bottom: 30px;
+}
+
+.camisa-card:hover .camisa-overlay {
+    opacity: 1;
+}
+
+.camisa-cta {
+    background: #ff3d00;
+    color: white;
+    padding: 10px 25px;
+    border-radius: 25px;
+    text-decoration: none;
+    font-weight: 600;
+    transform: translateY(20px);
+    transition: all 0.3s ease;
+}
+
+.camisa-card:hover .camisa-cta {
+    transform: translateY(0);
+}
+
+.camisa-cta:hover {
+    background: #ff6b00;
+    transform: translateY(-2px);
+}
+
+.camisa-info {
+    padding: 20px;
+    text-align: center;
+}
+
+.camisa-info h3 {
+    color: #2c2c54;
+    font-size: 1.3rem;
+    margin: 0;
+    font-weight: 600;
+}
+
+/* Animações específicas para esta seção */
+@keyframes camisas-pulse {
+    0% {
+        transform: scale(1);
+    }
+    100% {
+        transform: scale(1.1);
+    }
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+    .camisas-personalizadas {
+        padding: 40px 15px;
+    }
+    
+    .camisas-title {
+        font-size: 1.8rem;
+    }
+    
+    .camisas-grid {
+        grid-template-columns: 1fr;
+        max-width: 400px;
+        gap: 25px;
+    }
+    
+    .camisa-image-container {
+        aspect-ratio: 2/3; /* Mantém o modo retrato no mobile */
+    }
+}
+
+@media (max-width: 480px) {
+    .camisas-title {
+        font-size: 1.6rem;
+    }
+    
+    .camisa-info {
+        padding: 15px;
+    }
+    
+    .camisa-info h3 {
+        font-size: 1.2rem;
+    }
+    
+    .camisa-cta {
+        padding: 8px 20px;
+        font-size: 0.9rem;
+    }
+}
